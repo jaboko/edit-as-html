@@ -26,6 +26,7 @@ window.mouseover = e => {
   });
   const cl = [...node.classList].join('.');
   const list = [node.parentNode.parentNode, node.parentNode, node]
+    .filter((n) => !!n)
     .filter((n, i, l) => l.indexOf(n) === i)
     .map(n => n.localName)
     .filter(n => n);
